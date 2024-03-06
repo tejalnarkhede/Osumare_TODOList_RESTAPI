@@ -1,0 +1,16 @@
+h1{
+    color:rgb(194, 5, 5);
+}
+
+.tasks{
+    background-color: rgb(209, 202, 202);
+}
+
+.id{
+    font-style: italic;
+}
+
+button{
+    background-color: red;
+    color: white;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Tasks</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>TODO List</h1>
+    <%
+    for(task of tasks)
+    {%>
+        <div class="tasks">
+            <h3 class="task"><%=task.task %></h3>    
+
+            <% 
+            console.log("task id:"+task.id);
+            %>
+            <a href="http://localhost:2216/tasks/<%= task.id %>">See Task</a>&nbsp; &nbsp;
+            <a href="http://localhost:2216/tasks/<%= task.id %>/edit">Edit Task</a>&nbsp; &nbsp;
+            <form method="post" action="/tasks/<%= task.id %>?_method=DELETE">
+            <button>Delete task</button>
+            </form>
+        </div>
+        <br>
+    <%}
+    %>
+    <br><br>
+    <a href="http://localhost:2216/tasks/new">Add New Task</a>
+
+
+</body>
+
+</html>
